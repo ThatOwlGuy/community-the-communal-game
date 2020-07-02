@@ -69,6 +69,7 @@ Saved/*
 Intermediate/*.*
 Intermediate/AssetRegistryCache/*
 Intermediate/Build/*
+Intermediate/ReimportCache/*
 Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
