@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\CommunityTG.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{9BB5E447-1839-4F83-A053-67FC5210C1AA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CommunityTG.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\CommunityTGEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\README.md" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{F3E92365-163D-4FCD-A6C1-73DA0650473B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\CommunityTG">
+      <UniqueIdentifier>{04B92C2D-4A34-4EF7-8825-AA5B5DD5C59E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CommunityTG\CommunityTG.Build.cs">
+      <Filter>Source\CommunityTG</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\CommunityTG\CommunityTG.cpp">
+      <Filter>Source\CommunityTG</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CommunityTG\CommunityTG.h">
+      <Filter>Source\CommunityTG</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CommunityTG\Projectile.cpp">
+      <Filter>Source\CommunityTG</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CommunityTG\Projectile.h">
+      <Filter>Source\CommunityTG</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CommunityTG\ProjectileType.cpp">
+      <Filter>Source\CommunityTG</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CommunityTG\ProjectileType.h">
+      <Filter>Source\CommunityTG</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CommunityTG\Weapon.cpp">
+      <Filter>Source\CommunityTG</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CommunityTG\Weapon.h">
+      <Filter>Source\CommunityTG</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
