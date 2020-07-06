@@ -33,39 +33,38 @@ void AWeapon::Tick(float DeltaTime)
 
 bool AWeapon::Fire(AActor* firer)
 {
-	FVector location;
-	FVector direction;
-
-#if 0
-	if (ACharacter* character = Cast<ACharacter>(firer))
+	if (firer->GetLocalRole() == ROLE_Authority)
 	{
-		FRotator rotation;
-		character->GetActorEyesViewPoint(location, rotation);
-		direction = rotation.Vector();
-	}
-	else
+		Fire_Server(firer);
+		return true;
+	} else if (firer->GetLocalRole() == ROLE_AutonomousProxy)
 	{
-		location = firer->GetActorLocation();
-		direction = firer->GetActorForwardVector();
-	}
-#else
-	direction = this->GetActorRightVector();
-	location = this->GetActorLocation() + this->GetActorRotation().RotateVector(this->MuzzlePoint);
-#endif
-
-	AProjectile* projectile = AProjectile::Create(this, firer, location, direction);
-	if (projectile != nullptr)
-	{
-		projectile->Speed += direction * FiringForce * Type->Mass;
-
-		OnFire(projectile, firer);
-
+		OnFire(firer);
 		return true;
 	}
 
 	return false;
 }
 
-void AWeapon::OnFire_Implementation(AProjectile* projectile, AActor* firer)
+bool AWeapon::Fire_Server_Validate(AActor* firer)
+{
+	return true;
+}
+
+void AWeapon::Fire_Server_Implementation(AActor* firer)
+{
+	FVector direction = this->GetActorRightVector();
+	FVector location = this->GetActorLocation() + this->GetActorRotation().RotateVector(this->MuzzlePoint);
+
+	AProjectile* projectile = AProjectile::Create(this, firer, location, direction);
+	if (projectile != nullptr)
+	{
+		projectile->Speed += direction * FiringForce * Type->Mass;
+
+		OnFire(firer);
+	}
+}
+
+void AWeapon::OnFire_Implementation(AActor* firer)
 {
 }

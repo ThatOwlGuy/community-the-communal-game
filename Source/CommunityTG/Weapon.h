@@ -53,7 +53,11 @@ public:
 	 *	@param	firer		The owner which fired the weapon
 	 */
 	UFUNCTION(BlueprintNativeEvent, Category = "Events")
-	void OnFire(class AProjectile* projectile, AActor* firer);
+	void OnFire(AActor* firer);
+
+private:
+	UFUNCTION(Server, Reliable, WithValidation)
+	void Fire_Server(AActor* firer);
 
 public:
 

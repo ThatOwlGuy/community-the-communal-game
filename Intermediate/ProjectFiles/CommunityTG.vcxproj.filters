@@ -62,4 +62,14 @@
       <Filter>Source\CommunityTG</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\CommunityTG\ItemLocationComponent.h">
+      <Filter>Source\CommunityTG</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\CommunityTG\ItemLocationComponent.cpp">
+      <Filter>Source\CommunityTG</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
